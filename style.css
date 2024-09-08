@@ -82,11 +82,37 @@ header h1 {
     justify-content: space-between;
     align-items: center;
     margin-bottom: 10px;
+    position: relative;
 }
 
 .month-name {
     font-weight: bold;
     font-size: 18px;
+    flex-grow: 1;
+    text-align: center; /* Center the month name */
+}
+
+.month-arrows {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    transform: translateY(-50%);
+}
+
+.month-arrows span {
+    cursor: pointer;
+    font-size: 20px;
+    padding: 0 10px;
+    transition: transform 0.2s ease;
+}
+
+.month-arrows span:hover {
+    transform: scale(1.2);
+    color: #00796b;
 }
 
 .days, .dates {

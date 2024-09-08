@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Appointment Booking</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Doctor Appointment Booking</h1>
+        </header>
+
+        <!-- Doctor List Section -->
+        <section class="doctor-list-container">
+            <div class="doctor-list">
+                <div class="doctor-card" data-doctor="1">
+                    <h2>Dr. Smith</h2>
+                    <p>Cardiologist</p>
+                    <p>Rating: ⭐⭐⭐⭐</p>
+                    <button class="select-doctor">Book Appointment</button>
+                </div>
+                <div class="doctor-card" data-doctor="2">
+                    <h2>Dr. Brown</h2>
+                    <p>Dermatologist</p>
+                    <p>Rating: ⭐⭐⭐⭐⭐</p>
+                    <button class="select-doctor">Book Appointment</button>
+                </div>
+                <!-- Add more doctors as needed -->
+            </div>
+        </section>
+
+        <!-- Booking Page -->
+        <div class="booking-page" style="display:none;">
+            <button id="back-button" class="cool-back-button">Back</button>
+            <div class="booking-section">
+                <div class="calendar">
+                    <div class="month">
+                        <div class="month-name"></div>
+                        <div class="month-arrows">
+                            <span>&lt;</span>
+                            <span>&gt;</span>
+                        </div>
+                    </div>
+                    <div class="days">
+                        <div class="day">Mon</div>
+                        <div class="day">Tue</div>
+                        <div class="day">Wed</div>
+                        <div class="day">Thu</div>
+                        <div class="day">Fri</div>
+                        <div class="day">Sat</div>
+                        <div class="day">Sun</div>
+                    </div>
+                    <div class="dates">
+                        <!-- Dates will be dynamically generated here -->
+                    </div>
+                </div>
+
+                <div class="doctor-details">
+                    <div class="doctor-info">
+                        <img src="doctor1.avif" alt="Doctor" class="doctor-photo">
+                        <div>
+                            <h3 id="doctor-name">Dr. Smith</h3>
+                            <p id="doctor-specialty">Cardiologist</p>
+                        </div>
+                    </div>
+                    <div class="availability">
+                        <h4><span id="selected-date">24th May</span> availability</h4>
+                        <div class="time-slots">
+                            <!-- Time slots will be dynamically generated here -->
+                        </div>
+                    </div>
+                    <button class="book-appointment">Book Appointment</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- View Appointments Section -->
+        <section class="view-appointments" style="display:none;">
+            <h2 style="text-align: center;">Your Appointments</h2>
+            <ul id="appointment-list">
+                <!-- Appointments will be listed here -->
+            </ul>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
